@@ -41,11 +41,39 @@ console.log(lorem2);
 let person = {
     'name': 'Albert',
     'age': 32,
-    'country': 'cat'
+    'country': 'cat  '
 }
 
+
+//before
 console.log(person.name, person.age);
 
 //ECMA6
 let { name, age, country } = person;
 console.log(name, age, country);
+
+let team1 = ['Albert', 'Julian', 'Ricard'];
+let team2 = ['Valeria', 'Jessica', 'Camila'];
+
+let education = ['David', ...team1, ...team2];
+
+console.log(education);
+
+//Var es te un scop global
+{
+    var globalVar = "Global Var";
+}
+
+//let no te scop global
+{
+    let globalLet = 'Global Let';
+    //si cridem aqui si que funcionara
+    console.log(globalLet);
+}
+
+console.log(globalVar);
+//donará error
+console.log(globalLet);
+
+const a = 'b';
+a = 'a';
