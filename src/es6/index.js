@@ -1,16 +1,16 @@
 //Before ECMAScript6
 
-function newFunction(name, age, country) {
-    var name = name || 'Albert';
+function newFunction(nom, age, country) {
+    var nom = nom || 'Albert';
     var age = age || 32;
     var country = country || 'Cat';
-    console.log(name, age, country);
+    console.log(nom, age, country);
 };
 
 //ECMAScript6
 
-function newFunction2(name = 'Albert', age = 32, country = "cat") {
-    console.log(name, age, country);
+function newFunction2(nom = 'Albert', age = 32, country = "cat") {
+    console.log(nom, age, country);
 };
 
 newFunction2();
@@ -39,18 +39,18 @@ console.log(lorem);
 console.log(lorem2);
 
 let person = {
-    'name': 'Albert',
+    'nom': 'Albert',
     'age': 32,
     'country': 'cat  '
 }
 
 
 //before
-console.log(person.name, person.age);
+console.log(person.nom, person.age);
 
 //ECMA6
-let { name, age, country } = person;
-console.log(name, age, country);
+let { nom, age, country } = person;
+console.log(nom, age, country);
 
 let team1 = ['Albert', 'Julian', 'Ricard'];
 let team2 = ['Valeria', 'Jessica', 'Camila'];
@@ -77,3 +77,36 @@ console.log(globalLet);
 
 const a = 'b';
 a = 'a';
+
+
+
+let nom = 'Albert';
+let age = 32;
+
+
+object = { nome: nom, age: age };
+
+console.log(object);
+object2 = { nom, age };
+
+console.log(object2);
+
+const noms = [
+    { nom: 'Albert', age: 32 },
+    { nom: 'Maria', age: 31 }
+]
+//Funcio Normal
+let listOfNoms = noms.map(function (item) {
+    console.log(item.nom);
+})
+//Funció anonima ECMA 6
+let listOfNoms2 = noms.map(item => console.log(item.nom));
+
+const listOfNoms3 = (nom, age, country) => {
+    // codi funcio
+}
+const listOfNoms4 = nom => {
+    // codi funcio
+}
+
+const square = num => num * num;
